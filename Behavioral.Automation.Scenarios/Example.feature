@@ -13,5 +13,11 @@ PCR is used to amplify little part of DNA (for example, 1000 bps)
     And "Perform specificity check" checkbox is unchecked
     When user clicks on "Get primers" button
     Then "Primers design" table should become visible
+    And Page title is changed to "Primer blast results"
+    
 
-  Scenario: Another test (if user don't specify template than error shoud become visible)
+  Scenario: Another test (if user don't specify template than error should become visible)
+    Given URL "https://www.ncbi.nlm.nih.gov/tools/primer-blast/" is opened
+    And user entered "TAATAAGCCCCCGTCACTGTTGGTTGAAGAGC" into "template" input or user leaves "template" empty
+    And select from "database" dropdown "Genomes 
+    
